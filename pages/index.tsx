@@ -2,8 +2,18 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Button, Navbar, Mark, Card, Person, Attorneys } from "../components";
-import { AiFillFileText, AiOutlineVerified, AiOutlineUp } from "react-icons/ai";
+import {
+  AiFillFileText,
+  AiOutlineVerified,
+  AiOutlineUp,
+  AiFillFacebook,
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillYoutube,
+} from "react-icons/ai";
+import { FaGavel } from "react-icons/fa";
 import { BsPeopleFill, BsSpeedometer2 } from "react-icons/bs";
+import { RiScales3Fill } from "react-icons/ri";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
@@ -52,13 +62,9 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="flex flex-col gap-8 md:flex-row lg:gap-0">
+              <Mark Icon={FaGavel} title="98%" description="successful cases" />
               <Mark
-                Icon={AiOutlineVerified}
-                title="98%"
-                description="successful cases"
-              />
-              <Mark
-                Icon={AiOutlineUp}
+                Icon={RiScales3Fill}
                 title="10,6"
                 description="injury cases"
               />
@@ -71,7 +77,7 @@ const Home: NextPage = () => {
         <div className=" py-8 flex flex-col gap-8 lg:flex-row justify-center lg:gap-0 lg:mx-52 ">
           <div className="flex flex-col gap-8 md:flex-row lg:gap-0">
             <Card
-              Icon={AiFillFileText}
+              Icon={FaGavel}
               Title="Frauds or Misleads"
               Description="
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, vel.
@@ -80,7 +86,7 @@ const Home: NextPage = () => {
               ButtonText="More"
             />{" "}
             <Card
-              Icon={AiOutlineVerified}
+              Icon={AiFillFileText}
               Title="Bailes & Warrants"
               Description="
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, vel.
@@ -91,7 +97,7 @@ const Home: NextPage = () => {
           </div>
           <div className="flex flex-col gap-8 md:flex-row lg:gap-0">
             <Card
-              Icon={AiFillFileText}
+              Icon={AiOutlineVerified}
               Title="Federal Drug Crimes"
               Description="
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, vel.
@@ -100,7 +106,7 @@ const Home: NextPage = () => {
               ButtonText="More"
             />{" "}
             <Card
-              Icon={AiFillFileText}
+              Icon={FaGavel}
               Title="Traffic Related Crimes"
               Description="
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab, vel.
@@ -282,8 +288,8 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* request consultation */}
-      <div className="grid grid-cols-12 lg:mx-40">
-        <div className=" block col-span-12 lg:col-span-3 mb-10 ">
+      <div className="grid grid-cols-12 lg:mx-20 lg:my-10 mb-20  ">
+        <div className=" block col-span-12 lg:col-span-3 mb-10 2xl:mx-10 ">
           <Image
             src="/images/cover2.png"
             layout="responsive"
@@ -322,6 +328,73 @@ const Home: NextPage = () => {
               placeholder="4:00"
               className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full bg-zinc-100"
             />
+            <button className="flex mt-10 bg-yellow-800 w-full justify-center rounded py-4 font-opensans font-bold text-white">
+              Book Appointment
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* footer */}
+      <div className="flex flex-col capitalize px-20 whitespace-nowrap my-20 gap-7 xl:flex-row 2xl:mx-56  xl:justify-between">
+        <div className="flex flex-col gap-7 md:flex-row md:justify-between">
+          <div className="flex flex-col gap-2 md:w-64">
+            <h3 className="font-martel font-bold text-2xl mb-5">
+              Get In Touch
+            </h3>
+            <p className="font-opensans font-normal text-slate-700 whitespace-normal">
+              the quick fox jumps over the lazy dog
+            </p>
+            <div className="flex flex-row gap-3">
+              <AiFillFacebook className="w-7 h-7 text-blue-600" />
+              <AiFillInstagram className="w-7 h-7 text-pink-600" />
+              <AiFillTwitterCircle className="w-7 h-7 text-blue-400" />
+              <AiFillYoutube className="w-7 h-7 text-red-500" />
+            </div>
+          </div>
+          <div className="flex flex-col gap-2 md:w-64">
+            <h3 className="font-martel font-bold text-2xl mb-5">
+              Company info
+            </h3>
+            <p className="font-opensans font-semibold text-slate-700">
+              About Us
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              Carrier
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              We Are Hiring
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">Blog</p>
+          </div>
+        </div>
+        <div className="flex flex-col gap-7 md:flex-row md:justify-between">
+          <div className="flex flex-col gap-2 md:w-64">
+            <h3 className="font-martel font-bold text-2xl mb-5">Features</h3>
+            <p className="font-opensans font-semibold text-slate-700">
+              Business Marketing
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              User Analytic
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              Live Chat
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              Unlimited Support
+            </p>
+          </div>
+          <div className="flex flex-col gap-2 md:w-64">
+            <h3 className="font-martel font-bold text-2xl mb-5">Resources</h3>
+            <p className="font-opensans font-semibold text-slate-700">
+              IOS & Android
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              Watch a Demo
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">
+              Customers
+            </p>
+            <p className="font-opensans font-semibold text-slate-700">API</p>
           </div>
         </div>
       </div>
