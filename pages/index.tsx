@@ -312,7 +312,7 @@ const Home: NextPage = () => {
             />
             <p className="font-bold mb-2">Email*</p>
             <input
-              type="text"
+              type="email"
               placeholder="example@gmail.com"
               className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full bg-zinc-100"
             />
