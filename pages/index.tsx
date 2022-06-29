@@ -282,7 +282,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* request consultation */}
-      <div className="grid grid-cols-12">
+      <div className="grid grid-cols-12 lg:mx-40">
         <div className=" block col-span-12 lg:col-span-3 mb-10 ">
           <Image
             src="/images/cover2.png"
@@ -293,7 +293,7 @@ const Home: NextPage = () => {
             className=""
           />
         </div>
-        <div className="col-span-12 lg:col-span-9 mx-10">
+        <div className="col-span-12 lg:col-span-9 mx-10 lg:p-10">
           <h2 className="font-martel font-bold text-3xl text-left mb-10">
             Request A Free Consultation
           </h2>
@@ -302,18 +302,26 @@ const Home: NextPage = () => {
             <input
               type="text"
               placeholder="Full Name"
-              className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full"
+              className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full bg-zinc-100"
             />
             <p className="font-bold mb-2">Email*</p>
             <input
               type="text"
               placeholder="example@gmail.com"
-              className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full"
+              className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full bg-zinc-100"
             />
             <p className="font-bold mb-2">Department*</p>
-            <select className=" py-3 px-5 w-full border-zinc-800 border rounded-md mb-3">
-              <option value="N1S">Street N1S</option>
-            </select>
+            <input
+              type="text"
+              placeholder="N1S Street 12"
+              className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full bg-zinc-100"
+            />{" "}
+            <p className="font-bold mb-2">Time*</p>
+            <input
+              type="text"
+              placeholder="4:00"
+              className=" py-3 px-5 border-zinc-800 border rounded-md mb-3 w-full bg-zinc-100"
+            />
           </div>
         </div>
       </div>
